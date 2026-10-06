@@ -14,15 +14,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Installing Python dependencies...'
-                bat 'python --version'
-                bat 'pip install -r requirements.txt'
+
+                bat '"C:\\Users\\preet\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" --version'
+
+                bat '"C:\\Users\\preet\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m pip install -r requirements.txt'
             }
         }
 
         stage('Test/Validate') {
             steps {
                 echo 'Validating Python application...'
-                bat 'python -m py_compile main.py'
+
+                bat '"C:\\Users\\preet\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m py_compile main.py'
+
                 echo 'Python syntax validation successful.'
             }
         }
@@ -30,7 +34,8 @@ pipeline {
         stage('Docker Build') {
             steps {
                 echo 'Building Docker image...'
-                bat 'docker build -t sanskrit-speaking-bot:1.0 .'
+
+                bat '"C:\\Users\\preet\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" build -t sanskrit-speaking-bot:1.0 .'
             }
         }
     }
