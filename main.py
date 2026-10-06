@@ -99,6 +99,12 @@ VOCABULARY = [
     ("अधुना", "Now", "Adverb"),
 
     ("संस्कृतम्", "Sanskrit", "Noun"),
+
+    ("प्रश्नः", "Question", "Noun"),
+    ("उत्तरम्", "Answer", "Noun"),
+    ("समयः", "Time", "Noun"),
+    ("दिनम्", "Day", "Noun"),
+    ("रात्रिः", "Night", "Noun"),
 ]
 
 
